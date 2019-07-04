@@ -257,7 +257,7 @@ if __name__=="__main__":
     input = [[0,0], [0,1], [1,0], [1,1]]
     output = [[0,1], [1,0], [1,0], [0,1]]
     neuralNet.train(inputData=input, desiredOutputData=output, epochs=10000, batchSize = 4)
-    # neuralNet.loadWeightsAndBiases("/Users/aidanprice/Desktop/Machine Learning/")
+    # neuralNet.loadWeightsAndBiases("/Users/NAME/Desktop/Machine Learning/")
     print(neuralNet.query(input[0]))
     print(neuralNet.query(input[1]))
     print(neuralNet.query(input[2]))
