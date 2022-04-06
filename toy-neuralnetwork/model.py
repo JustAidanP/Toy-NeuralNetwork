@@ -143,8 +143,7 @@ class NeuralNetworkModel:
         # Propagates this error backwards, we reverse through the layers, excluding both the input and output layer,
         # propagating the error as we go [i.e. element i relates to layer i + 1]
         for i in range(len(self.node_counts) - 2, 0, -1):
-            # errors.append(self.weights[i].T @ errors[-1])
-            errors.append((errors[-1].T @ self.weights[i]).T)
+            errors.append(self.weights[i].T @ errors[-1])
         # Reverses the errors list so that the errors match up with their respective layers
         errors.reverse()
 
